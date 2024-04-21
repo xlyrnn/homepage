@@ -11,6 +11,11 @@
     height: 0;
 }
 
+.dark-mode {
+    background-color: #331D2C;
+    color: #5C469C;
+}
+
 body {
     font-family: "Jua", sans-serif;
     margin: 0;
