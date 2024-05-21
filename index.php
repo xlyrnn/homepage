@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <?php require_once 'connect.php'; ?>
+    <?php require_once 'blog.php'; ?>
+
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
@@ -35,7 +39,9 @@
                 <h1>HALLO, INI PIWI!</h1>
             </div>
             <div class="greet-p">
-                <p> Perkenalkan, saya Happy Pricillia Wongkar. Saya tinggal di daerah Paniki Bawah. Saat ini saya berada di tahun kedua kuliah pada prodi Informatika di Universitas Sam Ratulangi. Hobi saya menonton anime dan bermain game.</p>
+                <p> Perkenalkan, saya <?php
+                $row = mysqli_fetch_assoc($result); echo $row['nama']; ?>. Saya tinggal di daerah <?php echo $row['alamat']; ?>. Saat ini saya berada di tahun kedua kuliah pada prodi <?php echo $row['prodi']; ?> di Universitas <?php echo $row['universitas']; ?>. 
+                Hobi saya <?php echo $row['hobi']; ?>.</p>
             </div>
         </div>
     </section>
@@ -67,29 +73,29 @@
             <div class="article-container">
             <article>
                 <div>
-                    <h1>I Shall Master This Family</h1>
+                    <h1><?php echo $j1; ?></h1>
                 </div>
                  <div>
-                    <p>Florentia bereinkarnasi sebagai anak tidak sah dari keluarga terkaya di kekaisaran, dia mengira semuanya akan berjalan dengan baik di masa depan. Tetapi ayahnya telah meninggal dunia, kerabatnya meninggalkannya di depan pintu, dan keluarga terhormat yang sangat dia banggakan benar-benar hancur…. Dia minum sedikit (banyak) dan ditabrak kereta, Saat dia membuka matanya lagi, dia berumur tujuh tahun? Selain itu, Pangeran Kedua, yang merupakan musuh keluarganya di kehidupan sebelumnya mengikutinya seperti anjing! Tapi apakah ini nyata?</p>
-                    <a href="https://wto.to/series/98997">Baca Selengkapnya</a>
+                    <p><?php echo $k1; ?></p>
+                    <a href="<?php echo $l1; ?>">Baca Selengkapnya</a>
                  </div>
                 </article>
             <article>
                 <div>
-                    <h1>Solo Leveling</h1>
+                    <h1><?php echo $j2; ?></h1>
                 </div>
                 <div>
-                    <p> Dunia diguncang oleh kemunculan "Gate" misterius, portal yang menghubungkan Bumi dengan dimensi lain. Dari Gate tersebut bermunculan monster mengerikan yang mengancam umat manusia. Untuk melawan para monster, muncul profesi baru: Hunter.</p>
-                    <a href="https://id.kakaowebtoon.com/content/Solo-Leveling/22?tab=episode">Baca Selengkapnya</a>
+                    <p><?php echo $k2; ?></p>
+                    <a href="<?php echo $l1; ?>">Baca Selengkapnya</a>
                 </div>
                 </article>
                 <article>
                     <div>
-                        <h1>Villains Are Destined to Die</h1>
+                        <h1><?php echo $j3; ?></h1>
                     </div>
                     <div>
-                        <p>Semua orang selalu menyalahkan tokoh antagonis saat terjadi hal yang tidak diinginkan, tapi bagaimana jika tokoh antagonis terlihat jahat karena peran yang diberikan kepadanya? sama seperti Penelope Eckart, ia selalu disalahkan atas semua hal, padahal ia juga menderita karena selalu dimusuhi oleh kakak dan semua orang yang ada di keluarga hanya karena dia seorang anak angkat. Mampukah Penelope mengubah pandangan orang terhadapnya dan bertahan hidup?</p>
-                        <a href="https://wto.to/title/137832">Baca Selengkapnya</a>
+                        <p><?php echo $k3; ?></p>
+                        <a href="<?php echo $l3; ?>">Baca Selengkapnya</a>
                     </div>
                 </article>
             </div>
